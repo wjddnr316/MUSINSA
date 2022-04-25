@@ -1,0 +1,29 @@
+sprite_maps_template.hbs :
+
+// Sprites Map import
+{{#each import as |value key|}}
+@import "{{@root.path}}/{{@root.prefix}}{{value}}";
+{{/each}}
+
+// Sprites Map List
+$map_list: {{#each import as |value key|}}${{@root.prefix}}{{value}}, {{/each}};
+$ratio: {{ratio}};
+
+sprite_template.hbs : 
+
+// Sprites Map
+${{spritesheet_info.strings.name}}: (
+    name: '{{spritesheet_info.strings.name}}',
+    {{spritesheet_info.strings.bare_width}}: {{spritesheet.px.width}},
+    {{spritesheet_info.strings.bare_height}}: {{spritesheet.px.height}},
+    {{spritesheet_info.strings.bare_image}}: '{{{spritesheet.escaped_image}}}',
+    {{spritesheet_info.strings.bare_sprites}}: (
+    {{#each sprites}}
+    {{strings.name}}: (
+            {{strings.bare_offset_x}}: {{px.offset_x}},
+            {{strings.bare_offset_y}}: {{px.offset_y}},
+            {{strings.bare_width}}: {{px.width}},
+            {{strings.bare_height}}: {{px.height}},
+        ),
+    {{/each}})
+);

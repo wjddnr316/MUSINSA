@@ -1,0 +1,42 @@
+html {
+    font-size: 10px;
+    line-height: 10px
+}
+html[data-useragent*=iphone] input,html[data-useragent*=iphone] textarea {
+    outline: 0
+}
+body, button, code, input, select, table, textarea{
+    font-family: -apple-system,BlinkMacSystemFont,helvetica,Apple SD Gothic Neo,sans-serif;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+article,audio,body,button,dd,details,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,input,legend,li,menu,nav,ol,p,section,table,td,textarea,th,ul,video {
+    margin: 0;
+    padding: 0
+} 
+fieldset,img {
+    border: 0
+}
+img {
+    vertical-align: middle
+}
+ol,ul {
+    list-style: none
+}
+address,cite,dfn,em,i {
+    font-style: normal
+}
+table {
+    border-collapse: collapse
+}
+table caption {
+    display: none!important
+}
+.blind{
+    overflow:hidden;
+    position:absolute;
+    width:1px;
+    height:1px;
+    margin:-1px;
+    clip:rect(0,0,0,0);
+}

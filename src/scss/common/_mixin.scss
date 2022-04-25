@@ -1,0 +1,36 @@
+//ellipsis
+@mixin ellipsis($lines: null, $max-height :null) {
+	@if ($lines==null){
+		overflow:hidden;
+		display:block;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+	} @else {
+		overflow:hidden;
+		display:block;
+		display:-webkit-box;
+		max-height: $max-height;
+		text-overflow:ellipsis;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: $lines;
+		word-break:break-all;
+		word-wrap:break-word;
+	}
+}
+
+//box-sizing
+@mixin box-sizing($value : border-box){
+	-webkit-box-sizing:$value;
+	box-sizing:$value;
+}
+
+//box-shadow
+@mixin box-shadow($shadow-color){
+	-webkit-box-shadow:$shadow-color;
+	box-shadow:$shadow-color;
+}
+ 
+@mixin border-radius($value){
+	-webkit-border-radius:$value;
+	border-radius:$value;
+}
