@@ -738,3 +738,14 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
 }
+.main_slide .slide_info .category {
+  display: inline-block;
+  overflow: hidden;
+  color: transparent;
+  white-space: nowrap;
+  background: url("../img/sp_common.png") 0 0 no-repeat;
+  background-size: 95px 88.5px;
+  width: 23px;
+  height: 20px;
+  background-position: -28px -18px;
+}

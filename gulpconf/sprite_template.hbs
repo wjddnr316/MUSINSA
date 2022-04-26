@@ -1,16 +1,3 @@
-sprite_maps_template.hbs :
-
-// Sprites Map import
-{{#each import as |value key|}}
-@import "{{@root.path}}/{{@root.prefix}}{{value}}";
-{{/each}}
-
-// Sprites Map List
-$map_list: {{#each import as |value key|}}${{@root.prefix}}{{value}}, {{/each}};
-$ratio: {{ratio}};
-
-sprite_template.hbs : 
-
 // Sprites Map
 ${{spritesheet_info.strings.name}}: (
     name: '{{spritesheet_info.strings.name}}',
