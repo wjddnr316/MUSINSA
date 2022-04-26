@@ -1,3 +1,6 @@
+@import '_mixin';
+@import '_variables';
+
 html {
     font-size: 10px;
     line-height: 10px
@@ -32,11 +35,17 @@ table {
 table caption {
     display: none!important
 }
+a{
+    text-decoration: none;
+}
 .blind{
-    overflow:hidden;
-    position:absolute;
-    width:1px;
-    height:1px;
-    margin:-1px;
-    clip:rect(0,0,0,0);
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+}
+#container{
+    margin-top:$HeaderHeight;
 }

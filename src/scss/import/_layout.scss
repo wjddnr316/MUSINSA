@@ -1,0 +1,92 @@
+@import './common/_base';
+@import '../common/_mixin';
+@import '../common/_variables';
+
+// header
+.header{
+  position:fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  top:0;
+  right:0;
+  left:0;
+  height:$HeaderHeight;
+  background:#fff;
+  z-index:10;
+
+  .m_logo{
+    @include get-sprite('logo',$sp_common);
+    a{
+      display:block;
+      height:100%;
+    }
+  }
+
+  .btn_box{
+    position:absolute;
+    &.left{
+      left:11px;
+    }
+    &.right{
+      right:11px;
+    }
+  }
+
+  .btn_icon{
+    position:relative;
+    display:inline-block;
+    width:30px;
+    height:30px;
+    vertical-align:middle;
+    &:before{
+      content:'';
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+    }
+
+    &+.btn_icon{
+      margin-left:6px;
+    }
+    &.alarm{
+      &:before{
+        @include get-sprite('alarm',$sp_common);
+      }
+    }
+    &.like{
+      &:before{
+        @include get-sprite('like',$sp_common);
+      }
+    }
+    &.cart{
+      &:before{
+        @include get-sprite('cart',$sp_common);
+      }
+    }
+    .alarm_new{
+      position:absolute;
+      top:0;
+      right:0;
+      width:4px;
+      height:4px;
+      background:$Link;
+      border-radius:50%;
+    }
+    .cart_counting{
+      position:absolute;
+      right:-3px;
+      bottom:-3px;
+      height:18px;
+      line-height:18px;
+      padding:0 5px;
+      border-radius:9px;
+      background:$Link;
+      font-size:11px;
+      color:#fff;
+    }
+  }
+}
+
+// footer

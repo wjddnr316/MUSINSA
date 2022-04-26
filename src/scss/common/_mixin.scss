@@ -18,19 +18,44 @@
 	}
 }
 
-//box-sizing
-@mixin box-sizing($value : border-box){
-	-webkit-box-sizing:$value;
-	box-sizing:$value;
-}
+// sprite
+@import './_sprite_maps';
 
-//box-shadow
-@mixin box-shadow($shadow-color){
-	-webkit-box-shadow:$shadow-color;
-	box-shadow:$shadow-color;
+$isCommon: false !default;
+$ratio: 2;
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
 }
- 
-@mixin border-radius($value){
-	-webkit-border-radius:$value;
-	border-radius:$value;
+@function str-replace($string, $search, $replace:'') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+@mixin get-sprite($filename, $sprite-map) {
+    $spritePath: map-get($sprite-map,image);
+    $charAt: str-index($spritePath, 'img');
+    $total: str-length($spritePath);
+    $imgPath: '../'+str-slice($spritePath, $charAt, $total);
+    @if $isCommon{
+        $imgPath: str-replace($spritePath, 'src/', '../../');
+    }
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    color: transparent;
+    white-space:nowrap;
+    background: url($imgPath) 0 0 no-repeat;
+    background-size: calc(map-get($sprite-map,width)/$ratio) calc(map-get($sprite-map,height)/$ratio);
+    $icon-width : map-deep-get($sprite-map, 'sprites', $filename, 'width');
+    $icon-height : map-deep-get($sprite-map, 'sprites', $filename, 'height');
+    $offsetX : map-deep-get($sprite-map, 'sprites', $filename, 'offset-x');
+    $offsetY : map-deep-get($sprite-map, 'sprites', $filename, 'offset-y');
+    width: calc($icon-width/$ratio);
+    height: calc($icon-height/$ratio);
+    background-position: calc($offsetX/$ratio) calc($offsetY/$ratio);
 }

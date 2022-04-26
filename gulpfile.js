@@ -1,5 +1,6 @@
 const gulp = require('gulp'); 
 const scss = require("gulp-sass")(require('sass'));
+const minifycss = require('gulp-minify-css');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
@@ -12,7 +13,7 @@ const handlebars = require('gulp-compile-handlebars');
 
 const paths = { 
     dist_scss: 'src/css',
-    scss : 'src/scss/*.scss', 
+    scss : 'src/scss/**/*.scss', 
     html_path: 'src/',
     sprite_path: 'src/sprites/**' 
 };
@@ -26,8 +27,10 @@ gulp.task('scss', () => {
     return gulp.src(paths.scss) 
     .pipe(sourcemaps.init())
     .pipe(scss(scssOptions).on('error', scss.logError)) 
-    .pipe(autoprefixer())
+    .pipe(autoprefixer("safari 5"))
     .pipe(sourcemaps.write({addComment: false}))  
+    .pipe(minifycss())
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(paths.dist_scss)) 
 });
 
@@ -89,13 +92,13 @@ gulp.task('makeSpriteMap', () => {
   return gulp.src('gulpconf/sprite_maps_template.hbs')
   .pipe(handlebars({
     prefix: 'sp_',
-    path: path.posix.relative(path.posix.join('src/scss', 'sprite'),//
+    path: path.posix.relative(path.posix.join('src/scss', 'common'),//
     path.posix.join('src/scss', 'sprite')),
     import: getFolders('src/sprites'),
     ratio: 2
   }))
   .pipe(rename('_sprite_maps.scss'))
-  .pipe(gulp.dest(path.join('src/scss', 'sprite')));//
+  .pipe(gulp.dest(path.join('src/scss', 'common')));//
 });
 
 gulp.task('watch', () => {
