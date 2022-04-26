@@ -89,12 +89,13 @@ gulp.task('makeSpriteMap', () => {
   return gulp.src('gulpconf/sprite_maps_template.hbs')
   .pipe(handlebars({
     prefix: 'sp_',
-    path: path.posix.relative(path.posix.join('src/scss', 'sprite'),path.posix.join('src/scss', 'sprite')),
+    path: path.posix.relative(path.posix.join('src/scss', 'sprite'),//
+    path.posix.join('src/scss', 'sprite')),
     import: getFolders('src/sprites'),
     ratio: 2
   }))
   .pipe(rename('_sprite_maps.scss'))
-  .pipe(gulp.dest(path.join('src/scss', 'sprite')));
+  .pipe(gulp.dest(path.join('src/scss', 'sprite')));//
 });
 
 gulp.task('watch', () => {
