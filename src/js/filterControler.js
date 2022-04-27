@@ -11,7 +11,6 @@ function filterScroll(selectedItem){
   const selectedItemOffsetLeft = selectedItem.offsetLeft;
   const filterContainer = selectedItem.closest('[role="menu"]')
   const firstFilterItem = filterContainer.querySelectorAll('[role="menuitem"]')[0];
-
   filterContainer.scrollTo({
     left:selectedItemOffsetLeft - firstFilterItem.offsetLeft,
     behavior: 'smooth',

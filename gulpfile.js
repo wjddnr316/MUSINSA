@@ -36,14 +36,14 @@ gulp.task('scss', () => {
 
 gulp.task('runBrowserSync', () => {
     const options = {
-        browserSync: {
-        port: 3333,
+      browserSync: { 
+        port: 8080,
         server: {
-            baseDir: paths.html_path,
-            directory: true
+          baseDir: paths.html_path,
+          directory: true
         },
         open: 'external',
-        },
+      },
     };
     browserSync.init(options.browserSync);
     gulp.watch('./src/*.html').on('change',browserSync.reload);
@@ -93,7 +93,7 @@ gulp.task('makeSpriteMap', () => {
   .pipe(handlebars({
     prefix: 'sp_',
     path: path.posix.relative(path.posix.join('src/scss', 'abstract'),//
-    path.posix.join('src/scss', 'sprite')),
+    path.posix.join('src/scss/abstract', 'sprite')),
     import: getFolders('src/sprites'),
     ratio: 2
   }))

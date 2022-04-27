@@ -1,6 +1,6 @@
-#container{
-  margin-top:$HeaderHeight;
-}
+
+@import '../abstract/mixin';
+@import '../abstract/variables';
 // header
 .header{
   position:fixed;
@@ -15,9 +15,7 @@
   z-index:10;
 
   .m_logo{
-    font-size:34px;
-    color:red;
-    // @include get-sprite('logo',$sp_common);
+    @include get-sprite('logo',$sp_common);
     a{
       display:block;
       height:100%;

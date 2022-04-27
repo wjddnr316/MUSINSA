@@ -1,6 +1,5 @@
-@import './common/base';
-@import './common/header';
-@import './common/layout';
+@import './abstract/mixin';
+@import './abstract/variables';
 
 .main_slide{
   position:relative;
@@ -48,9 +47,11 @@
   }
   .pagination{
     width:100px !important;
+    z-index:5;
     .swiper-pagination-bullet{
       background:rgba(255,2552,255,.5);
       opacity:1;
+      color:transparent;
       &-active{
         background:#fff;
       }

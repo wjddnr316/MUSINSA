@@ -1,3 +1,9 @@
+@import './public/base';
+@import './public/header';
+
+#container{
+  margin-top:$HeaderHeight;
+}
 
 //공통 article
 .cm_article{

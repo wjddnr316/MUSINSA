@@ -1,5 +1,5 @@
 .cm_filter_box{
-  padding-top:15px;
+  padding:15px 0;
   .filter_head{
     position:relative;
     display:flex;
@@ -27,7 +27,7 @@
       right:0;
       top:50%;
       transform:translateY(-50%);
-      @include get-sprite('arrow14',$sp_common);
+      @include get-sprite('arrow14',$sp_main);
     }
   }
   .filter_toggle{
@@ -35,13 +35,14 @@
     padding-right:20px;
     font-size:14px;
     line-height:21px;
+    color:#000;
     &:before{
       content:'';
       position:absolute;
       right:0;
       top:50%;
       transform:translateY(-50%);
-      @include get-sprite('filter',$sp_common);
+      @include get-sprite('filter',$sp_main);
     }
   }
 

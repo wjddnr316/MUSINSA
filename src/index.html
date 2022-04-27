@@ -6,6 +6,7 @@
    <meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <link rel="stylesheet" type="text/css" href="./css/common.css" />
    <link rel="stylesheet" type="text/css" href="./css/main.css" />
    <link rel="stylesheet" type="text/css" href="./css/swiper.css" />
    <script src="./js/swiper.js"></script>
@@ -18,14 +19,13 @@
    </div>
    <header id="header" class="header">
       <h1 class="m_logo">
-         LOGO
          <a href="#"><span class="blind">무신사</span></a>
       </h1>
       <div class="btn_box left">
          <a href="#none" class="btn_icon alarm">
             <span class="blind">알림</span>
             <!--[D] 새로운 알림 있을 경우 alarm_new 추가-->
-            <span class="alarm_new"><span class="blind">새로운 알림</span></span>
+            <span class="alarm_new"><span class="blind">새 알림 있음</span></span>
          </a>
       </div>
       <div class="btn_box right">
@@ -42,17 +42,18 @@
    <main id="container">
       <div id="content">
          <article class="cm_article">
-            <h2 class="blind">New</h2>
+            <h2 class="blind">새로운 소식</h2>
             <div class="main_slide">
+               <div class="pagination swiper-pagination"></div>
                <ul class="swiper-wrapper">
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="#none">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img1.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Showcase</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">쿠어 21 S/S<br> 신상품 한정 발매</strong> 
                               신상품 증정 이벤트
                            </p>
@@ -60,14 +61,14 @@
                      </a>
                   </li>
                   
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Showcase</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">인사일런스 우먼<br> 프로젝트 성수</strong> 
                               성수 티셔츠 선발매 및 21 S/S 최대 15% 할인
                            </p>
@@ -75,14 +76,14 @@
                      </a>
                   </li>
    
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img3.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -90,14 +91,14 @@
                      </a>
                   </li>
 
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -105,14 +106,14 @@
                      </a>
                   </li>
 
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -120,14 +121,14 @@
                      </a>
                   </li>
 
-                  <li class="swiper-slide">
+                  <li class="swiper-slide" tabindex="1">
                      <a href="">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description">
+                           <p class="description" role="text">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -135,9 +136,9 @@
                      </a>
                   </li>
                </ul>
-               <div class="pagination swiper-pagination"></div>
             </div>
          </article>
+
          <article class="cm_article">
             <h3 class="blind">상품영역</h3>
             <div class="cm_article_inner">
@@ -161,10 +162,9 @@
                            <button type="button" class="filter_toggle" aria-haspopup="dialog" aria-controls="option-dialog" aria-expanded="false" id="option-btn">전체 연령대</button>
                            <!-- 연령대 옵션 선택 시 펼칠 영역 -->
                            <div class="cm_layer_pop" role="dialog" id="option-dialog" aria-labelledby="option-dialog-title" style="right:0; top:100%">
-                              <h3 class="blind" id="option-dialog-title">연령 선택</h3>
                            </div>
                         </div>
-                        <ul class="filter_list" role="menu" aria-label="카테고리 메뉴">
+                        <ul class="filter_list" role="menu">
                            <li class="filter_item" role="none presentation">
                               <button type="button" class="filter_menu" role="menuitem" aria-selected="true">전체</button>
                            </li>
@@ -197,18 +197,107 @@
                            </li>
                         </ul>
                      </div>
-                     <div class="md_product">
-                        <ul class="product_list">
-                           <li class="product_item"></li>
-                        </ul>
+
+                     <div class="md_goods type_rank">
+                        <ol class="goods_list">
+                           <li class="goods_item">
+                              <a href="#none" class="goods_link">
+                                 <div class="goods_thumb">
+                                    <span class="rank_badge">1</span>
+                                    <!-- [D] alt 값은 비워 주세요. -->
+                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img1.jpg" alt="" />
+                                 </div>
+                                 <dl class="goods_detail">
+                                    <dt class="blind">상품명</dt>
+                                    <dd class="goods_name">한줄이 넘어간다면 말줄임이 적용 됩니다.</dd>
+                                    <dt class="blind">판매가격</dt>
+                                    <dd class="goods_price">1,999,900원</dd>
+                                    <dt class="blind">혜택</dt>
+                                    <dd class="goods_sale">24%</dd>
+                                 </dl>
+                              </a>
+                           </li>
+                           
+                           <li class="goods_item">
+                              <a href="#none" class="goods_link">
+                                 <div class="goods_thumb">
+                                    <span class="rank_badge">2</span>
+                                    <!-- [D] alt 값은 비워 주세요. -->
+                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img2.jpg" alt="" />
+                                 </div>
+                                 <dl class="goods_detail">
+                                    <dt class="blind">상품명</dt>
+                                    <dd class="goods_name">리퍼지스토어</dd>
+                                    <dt class="blind">판매가격</dt>
+                                    <dd class="goods_price">74,900원</dd>
+                                    <dt class="blind">혜택</dt>
+                                    <dd class="goods_sale">24%</dd>
+                                 </dl>
+                              </a>
+                           </li>
+                           
+                           <li class="goods_item">
+                              <a href="#none" class="goods_link">
+                                 <div class="goods_thumb">
+                                    <span class="rank_badge">3</span>
+                                    <!-- [D] alt 값은 비워 주세요. -->
+                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img3.jpg" alt="" />
+                                 </div>
+                                 <dl class="goods_detail">
+                                    <dt class="blind">상품명</dt>
+                                    <dd class="goods_name">리퍼지스토어</dd>
+                                    <dt class="blind">판매가격</dt>
+                                    <dd class="goods_price">9,999,900원</dd>
+                                    <dt class="blind">혜택</dt>
+                                    <dd class="goods_sale">24%</dd>
+                                 </dl>
+                              </a>
+                           </li>
+                           
+                           <li class="goods_item">
+                              <a href="#none" class="goods_link">
+                                 <div class="goods_thumb">
+                                    <span class="rank_badge">4</span>
+                                    <!-- [D] alt 값은 비워 주세요. -->
+                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img4.jpg" alt="" />
+                                 </div>
+                                 <dl class="goods_detail">
+                                    <dt class="blind">상품명</dt>
+                                    <dd class="goods_name">리퍼지스토어</dd>
+                                    <dt class="blind">판매가격</dt>
+                                    <dd class="goods_price">74,900원</dd>
+                                    <dt class="blind">혜택</dt>
+                                    <dd class="goods_coupon">쿠폰</dd>
+                                 </dl>
+                              </a>
+                           </li>
+                           
+                           <li class="goods_item">
+                              <a href="#none" class="goods_link">
+                                 <div class="goods_thumb">
+                                    <span class="rank_badge">5</span>
+                                    <!-- [D] alt 값은 비워 주세요. -->
+                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img5.jpg" alt="" />
+                                 </div>
+                                 <dl class="goods_detail">
+                                    <dt class="blind">상품명</dt>
+                                    <dd class="goods_name">리퍼지스토어</dd>
+                                    <dt class="blind">판매가격</dt>
+                                    <dd class="goods_price">74,900원</dd>
+                                    <dt class="blind">혜택</dt>
+                                    <dd class="goods_sale">24%</dd>
+                                 </dl>
+                              </a>
+                           </li>
+                        </ol>
                      </div>
+
                      <div class="md_banner">
-                        <ul class="banner_list">
-                           <li class="banner_item"></li>
-                        </ul>
+
                      </div>
                   </section>
                </div>
+
                <div class="cm_panel_box" role="tabpanel" id="coordi-panel" aria-labelledby="coordi-tab">
                   
                </div>
@@ -219,15 +308,25 @@
          </article>
       </div>
    </main>
+
    <footer></footer>
    <script src="./js/tabControler.js"></script>
    <script src="./js/filterControler.js"></script>
    <script>
       var swiper = new Swiper(".main_slide", {
+         initialSlide:0,
          loop: true,
+         a11y: {
+            slideLabelMessage: '{{index}}번 슬라이드',
+         },
+         centeredSlides: true,
          pagination: {
             el: ".swiper-pagination",
+            clickable : true,
             dynamicBullets: true,
+            renderBullet : function (index, className) {  
+               return '<button type="button" class="' + className + '">' + (index + 1)+ '번째 보기' + '</button>'
+            },
         },
       });
 

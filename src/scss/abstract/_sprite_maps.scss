@@ -1,6 +1,7 @@
 // Sprites Map import
-@import "./sprite/sp_common";
+@import "sprite/sp_common";
+@import "sprite/sp_main";
 
 // Sprites Map List
-$map_list: $sp_common, ;
+$map_list: $sp_common, $sp_main, ;
 $ratio: 2;

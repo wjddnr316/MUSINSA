@@ -1,0 +1,39 @@
+// Sprites Map
+$sp_main: (
+    name: 'sp_main',
+    width: 120px,
+    height: 80px,
+    image: '../img/sp_main.png',
+    sprites: (
+    arrow14: (
+            offset-x: -40px,
+            offset-y: -44px,
+            width: 28px,
+            height: 28px,
+        ),
+        arrow18: (
+            offset-x: -56px,
+            offset-y: 0px,
+            width: 36px,
+            height: 36px,
+        ),
+        autoplay: (
+            offset-x: 0px,
+            offset-y: 0px,
+            width: 52px,
+            height: 40px,
+        ),
+        filter: (
+            offset-x: -96px,
+            offset-y: 0px,
+            width: 24px,
+            height: 26px,
+        ),
+        refresh: (
+            offset-x: 0px,
+            offset-y: -44px,
+            width: 36px,
+            height: 36px,
+        ),
+    )
+);
