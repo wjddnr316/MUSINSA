@@ -1,7 +1,6 @@
-@import './common/_base';
-@import '../common/_mixin';
-@import '../common/_variables';
-
+#container{
+  margin-top:$HeaderHeight;
+}
 // header
 .header{
   position:fixed;
@@ -16,7 +15,9 @@
   z-index:10;
 
   .m_logo{
-    @include get-sprite('logo',$sp_common);
+    font-size:34px;
+    color:red;
+    // @include get-sprite('logo',$sp_common);
     a{
       display:block;
       height:100%;
@@ -71,7 +72,7 @@
       right:0;
       width:4px;
       height:4px;
-      background:$Link;
+      background:$Blue;
       border-radius:50%;
     }
     .cart_counting{
@@ -82,11 +83,9 @@
       line-height:18px;
       padding:0 5px;
       border-radius:9px;
-      background:$Link;
+      background:$Blue;
       font-size:11px;
       color:#fff;
     }
   }
 }
-
-// footer

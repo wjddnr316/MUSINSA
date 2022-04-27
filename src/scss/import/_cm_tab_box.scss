@@ -1,0 +1,27 @@
+.cm_tab_box{
+  padding-top:30px;
+  .cm_tab_list{
+    display:flex;
+    background-color:$Gray2;
+    border-radius:4px;
+    .tab_menu{
+      width:100%;
+      height:40px;
+      line-height:40px;
+      font-size:13px;
+      font-weight:500;
+      border-radius:inherit;
+      color:$Gray6;
+      &.selected{
+        background-color:#fff;
+        border:1px solid $Gray4;
+        box-sizing:border-box;
+        color:#000;
+      }
+    }
+  }
+}
+
+.cm_panel_box{
+
+}

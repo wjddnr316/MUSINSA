@@ -1,0 +1,10 @@
+
+//공통 article
+.cm_article{
+  clear:both;
+  position:relative;
+  &_inner{
+    padding:0 15px;
+  }
+}
+// footer

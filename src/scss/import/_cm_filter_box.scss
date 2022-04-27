@@ -1,0 +1,77 @@
+.cm_filter_box{
+  padding-top:15px;
+  .filter_head{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:40px;
+  }
+  .filter_title{
+    font-size:18px;
+    line-height:27px;
+    font-weight:400;
+  }
+  .filter_more{
+    float:right;
+    position:relative;
+    display:inline-block;
+    padding:4.5px 16px 4.5px 10px;
+    font-size:12px;
+    line-height:18px;
+    vertical-align:top;
+    color:$Gray7;
+    &:before{
+      content:'';
+      position:absolute;
+      right:0;
+      top:50%;
+      transform:translateY(-50%);
+      @include get-sprite('arrow14',$sp_common);
+    }
+  }
+  .filter_toggle{
+    position:relative;
+    padding-right:20px;
+    font-size:14px;
+    line-height:21px;
+    &:before{
+      content:'';
+      position:absolute;
+      right:0;
+      top:50%;
+      transform:translateY(-50%);
+      @include get-sprite('filter',$sp_common);
+    }
+  }
+
+  .filter_list{
+    margin:0 -15px;
+    padding:10px 15px;
+    overflow-x:auto;
+    white-space:nowrap;
+    font-size:0;
+    &::-webkit-scrollbar{
+      display:none;
+    }
+  }
+  .filter_item{
+    display:inline-block;
+    &+.filter_item{
+      margin-left:8px;
+    }
+  }
+  .filter_menu{
+    display:block;
+    padding:4px 10px 3px;
+    border-radius:4px;
+    border:1px solid $Gray4;
+    font-size:14px;
+    line-height:21px;
+    color:$Gray6;
+    &[aria-selected="true"]{
+      border-color:#000;
+      color:#000;
+    }
+  }
+}

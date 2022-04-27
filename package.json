@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "browser-sync": "^2.27.9",
-    "fs": "^0.0.1-security",
+    "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-compile-handlebars": "^0.6.1",

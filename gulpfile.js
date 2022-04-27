@@ -81,7 +81,7 @@ gulp.task('makeSprite', () => {
       }));
       stream_arr.push(new Promise(function(resolve) {
         spriteData.css
-          .pipe(gulp.dest(path.join('src/scss', 'sprite')))
+          .pipe(gulp.dest(path.join('src/scss/abstract', 'sprite')))
           .on('end', resolve);
       }));
     });
@@ -92,13 +92,13 @@ gulp.task('makeSpriteMap', () => {
   return gulp.src('gulpconf/sprite_maps_template.hbs')
   .pipe(handlebars({
     prefix: 'sp_',
-    path: path.posix.relative(path.posix.join('src/scss', 'common'),//
+    path: path.posix.relative(path.posix.join('src/scss', 'abstract'),//
     path.posix.join('src/scss', 'sprite')),
     import: getFolders('src/sprites'),
     ratio: 2
   }))
   .pipe(rename('_sprite_maps.scss'))
-  .pipe(gulp.dest(path.join('src/scss', 'common')));//
+  .pipe(gulp.dest(path.join('src/scss', 'abstract')));//
 });
 
 gulp.task('watch', () => {

@@ -18,6 +18,7 @@
    </div>
    <header id="header" class="header">
       <h1 class="m_logo">
+         LOGO
          <a href="#"><span class="blind">무신사</span></a>
       </h1>
       <div class="btn_box left">
@@ -40,8 +41,8 @@
    </header>
    <main id="container">
       <div id="content">
-         <!-- slide visual --> 
-         <section class="section">
+         <article class="cm_article">
+            <h2 class="blind">New</h2>
             <div class="main_slide">
                <ul class="swiper-wrapper">
                   <li class="swiper-slide">
@@ -73,7 +74,7 @@
                         </div>
                      </a>
                   </li>
-
+   
                   <li class="swiper-slide">
                      <a href="">
                         <div class="slide_img">
@@ -88,82 +89,166 @@
                         </div>
                      </a>
                   </li>
+
+                  <li class="swiper-slide">
+                     <a href="">
+                        <div class="slide_img">
+                           <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
+                        </div>
+                        <div class="slide_info">
+                           <span class="category">Open</span>
+                           <p class="description">
+                              <strong class="summary">BOUTIQUE<br> Grand Open</strong>
+                              무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
+                           </p>
+                        </div>
+                     </a>
+                  </li>
+
+                  <li class="swiper-slide">
+                     <a href="">
+                        <div class="slide_img">
+                           <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
+                        </div>
+                        <div class="slide_info">
+                           <span class="category">Open</span>
+                           <p class="description">
+                              <strong class="summary">BOUTIQUE<br> Grand Open</strong>
+                              무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
+                           </p>
+                        </div>
+                     </a>
+                  </li>
+
+                  <li class="swiper-slide">
+                     <a href="">
+                        <div class="slide_img">
+                           <img src="https://image.msscdn.net/musinsaUI/homework/banner/img2.jpg" alt="" />
+                        </div>
+                        <div class="slide_info">
+                           <span class="category">Open</span>
+                           <p class="description">
+                              <strong class="summary">BOUTIQUE<br> Grand Open</strong>
+                              무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
+                           </p>
+                        </div>
+                     </a>
+                  </li>
                </ul>
                <div class="pagination swiper-pagination"></div>
             </div>
-         </section>
+         </article>
+         <article class="cm_article">
+            <h3 class="blind">상품영역</h3>
+            <div class="cm_article_inner">
+               <div class="cm_tab_box">
+                  <div class="cm_tab_list" role="tablist">
+                     <!-- [D] 탭 활성화 시 aria-selected="true"/ selected 클래스 적용 -->
+                     <button type="button" class="tab_menu selected" role="tab" aria-selected="true" aria-controls="ranking-panel" id="ranking-tab">랭킹</button>
+                     <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="coordi-panel" id="coordi-tab">코디</button>
+                     <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="update-panel" id="update-tab">업데이트</button>
+                  </div>
+               </div>
+               <div class="cm_panel_box" role="tabpanel" id="ranking-panel" aria-labelledby="ranking-tab">
+                  <section class="cm_section">
+                     <div class="cm_filter_box">
+                        <div class="filter_head">
+                           <h3 class="filter_title">
+                              상품 랭킹
+                              <a href="" class="filter_more">전체 <span class="blind">랭킹 보기</span></a>
+                           </h3>
+                           <!-- [D] 연령 옵션 활성화 시 aria-expanded="true"-->
+                           <button type="button" class="filter_toggle" aria-haspopup="dialog" aria-controls="option-dialog" aria-expanded="false" id="option-btn">전체 연령대</button>
+                           <!-- 연령대 옵션 선택 시 펼칠 영역 -->
+                           <div class="cm_layer_pop" role="dialog" id="option-dialog" aria-labelledby="option-dialog-title" style="right:0; top:100%">
+                              <h3 class="blind" id="option-dialog-title">연령 선택</h3>
+                           </div>
+                        </div>
+                        <ul class="filter_list" role="menu" aria-label="카테고리 메뉴">
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="true">전체</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">상의</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">아우터</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">바지</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">가방</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">신발</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">스니커즈</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">양말</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">모자</button>
+                           </li>
+                           <li class="filter_item" role="none presentation">
+                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">레그웨어</button>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="md_product">
+                        <ul class="product_list">
+                           <li class="product_item"></li>
+                        </ul>
+                     </div>
+                     <div class="md_banner">
+                        <ul class="banner_list">
+                           <li class="banner_item"></li>
+                        </ul>
+                     </div>
+                  </section>
+               </div>
+               <div class="cm_panel_box" role="tabpanel" id="coordi-panel" aria-labelledby="coordi-tab">
+                  
+               </div>
+               <div class="cm_panel_box" role="tabpanel" id="update-panel" aria-labelledby="update-tab">
 
-         <!-- product -->
-         <section class="section">
-            <div class="main_tab_list" role="tablist">
-               <!-- [D] 탭 활성화 시 aria-selected="true" 적용 -->
-               <button type="button" class="tab_menu" role="tab" aria-selected="true" aria-controls="ranking-panel" id="ranking-tab">랭킹</button>
-               <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="coordi-panel" id="coordi-tab">코디</button>
-               <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="update-panel" id="update-tab">업데이트</button>
+               </div>
             </div>
-            <div class="main_tab_panel" role="tabpanel" id="ranking-panel" aria-labelldby="ranking-tab">
-               <article class="article_box">
-                  <div class="box_header">
-                     <h3 class="title">상품 랭킹 <a href="" class="link more">전체</a></h3>
-                     <button type="button" class="btn btn_toggle">전체 연령대</button>
-                  </div>
-                  <div class="box_filter">
-                     <ul class="filter_tab_list" role="tablist">
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="true">전체</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">상의</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">아우터</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">바지</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">가방</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">신발</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">스니커즈</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">양말</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">모자</button>
-                        </li>
-                        <li role="none presentation">
-                           <button type="button" class="tab_menu" role="tab" aria-selected="false">레그웨어</button>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="box_product">
-                     <ul class="product_list">
-                        <li class="product_item"></li>
-                     </ul>
-                  </div>
-                  <div class="box_banner">
-                     <ul class="banner_list">
-                        <li class="banner_item"></li>
-                     </ul>
-                  </div>
-               </article>
-            </div>
-         </section>
+         </article>
       </div>
    </main>
    <footer></footer>
+   <script src="./js/tabControler.js"></script>
+   <script src="./js/filterControler.js"></script>
    <script>
       var swiper = new Swiper(".main_slide", {
-        pagination: {
-          el: ".swiper-pagination",
-          dynamicBullets: true,
+         loop: true,
+         pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
         },
       });
+
+      // tab 
+      const tab = document.querySelectorAll('.cm_tab_box .tab_menu');
+
+      tab.forEach((el) => {
+         el.addEventListener('click', () => {
+            activeTab(el);
+         })
+      })
+
+      // filter 
+      const filter = document.querySelectorAll('.cm_filter_box .filter_menu');
+
+      filter.forEach(el => {
+         el.addEventListener('click',() => {
+            activeFilter(el);
+         })
+      })
+
    </script>
 </body>
 
