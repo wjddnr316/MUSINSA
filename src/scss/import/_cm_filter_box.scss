@@ -11,6 +11,16 @@
     font-size:18px;
     line-height:27px;
     font-weight:400;
+    &:only-child{
+      width:100%;
+      text-align:center;
+      .filter_more{
+        position:absolute;
+        right:0;
+        top:50%;
+        transform:translateY(-50%);
+      }
+    }
   }
   .filter_more{
     float:right;

@@ -24,6 +24,7 @@
 
   .btn_box{
     position:absolute;
+    font-size:0;
     &.left{
       left:11px;
     }
@@ -37,6 +38,7 @@
     display:inline-block;
     width:30px;
     height:30px;
+    font-size:13px;
     vertical-align:middle;
     &:before{
       content:'';
@@ -47,7 +49,7 @@
     }
 
     &+.btn_icon{
-      margin-left:6px;
+      margin-left:10px;
     }
     &.alarm{
       &:before{
