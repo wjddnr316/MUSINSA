@@ -1,4 +1,4 @@
-.cm_filter_box{
+.cm_filter_tab{
   padding:15px 0;
   .filter_head{
     position:relative;
@@ -40,7 +40,7 @@
       @include get-sprite('arrow14',$sp_main);
     }
   }
-  .filter_toggle{
+  .option_toggle{
     position:relative;
     padding-right:20px;
     font-size:14px;
@@ -72,7 +72,7 @@
       margin-left:8px;
     }
   }
-  .filter_menu{
+  .filter_btn{
     display:block;
     padding:4px 10px 3px;
     border-radius:4px;

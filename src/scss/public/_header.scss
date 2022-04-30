@@ -21,19 +21,19 @@
       height:100%;
     }
   }
-
-  .btn_box{
+  .header_left,
+  .header_right{
     position:absolute;
     font-size:0;
-    &.left{
-      left:11px;
-    }
-    &.right{
-      right:11px;
-    }
+  }
+  .header_left{
+    left:11px;
+  }
+  .header_right{
+    right:11px;
   }
 
-  .btn_icon{
+  [class^="btn"]{
     position:relative;
     display:inline-block;
     width:30px;
@@ -48,23 +48,14 @@
       transform:translate(-50%,-50%);
     }
 
-    &+.btn_icon{
+    &+[class^="btn"]{
       margin-left:10px;
     }
-    &.alarm{
-      &:before{
-        @include get-sprite('alarm',$sp_common);
-      }
-    }
-    &.like{
-      &:before{
-        @include get-sprite('like',$sp_common);
-      }
-    }
-    &.cart{
-      &:before{
-        @include get-sprite('cart',$sp_common);
-      }
+  }
+  
+  .btn_alarm{
+    &:before{
+      @include get-sprite('alarm',$sp_common);
     }
     .alarm_new{
       position:absolute;
@@ -74,6 +65,16 @@
       height:4px;
       background:$Blue;
       border-radius:50%;
+    }
+  }
+  .btn_like{
+    &:before{
+      @include get-sprite('like',$sp_common);
+    }
+  }
+  .btn_cart{
+    &:before{
+      @include get-sprite('cart',$sp_common);
     }
     .cart_counting{
       position:absolute;

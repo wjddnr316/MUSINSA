@@ -60,9 +60,9 @@
 }
 
 // 공통
-@import './import/cm_tab_box';
-@import './import/cm_filter_box';
-@import './import/cm_banner_box';
+@import './import/cm_main_tab';
+@import './import/cm_filter_tab';
+@import './import/cm_banner';
 
 // 모듈
-@import './import/md_goods_box';
+@import './import/_goods_ranking';

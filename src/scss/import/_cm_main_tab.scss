@@ -1,6 +1,6 @@
-.cm_tab_box{
+.cm_main_tab{
   padding-top:30px;
-  .cm_tab_list{
+  .tab_list{
     display:flex;
     background-color:$Gray2;
     border-radius:4px;
@@ -12,7 +12,7 @@
       font-weight:500;
       border-radius:inherit;
       color:$Gray6;
-      &.selected{
+      &[aria-selected="true"]{
         background-color:#fff;
         border:1px solid $Gray4;
         box-sizing:border-box;

@@ -1,0 +1,122 @@
+.goods_ranking{
+  .goods_list{
+    display:flex;
+    flex-wrap:wrap;   
+  }
+  .goods_item{
+    width:calc(33.333% - 2px);
+    padding-bottom:20px;
+    margin-left:3px;
+    &.item_col_2{
+      width:calc(50% - 1.5px);
+      &:first-child{
+        margin-left:0;
+      }
+      &~.goods_item:nth-child(3n) { 
+        margin-left:0;
+      }
+      .rank_badge{
+        width:24px;
+        height:24px;
+        line-height:24px;
+        background:$Gray9;
+      }
+      .goods_price{
+        font-size:15px;
+        line-height:22px;
+      }
+      .goods_sale{
+        font-size:15px;
+        line-height:22px;
+      }
+    }
+  }
+  .goods_thumb{
+    position:relative;
+    overflow:hidden;
+    padding-top:calc(136 / 113 * 100%);
+    img{
+      position:absolute;
+      left:0;
+      top:50%;
+      width:100%;
+      height:auto;
+      transform:translateY(-50%);
+    }
+    .rank_badge{
+      position:absolute;
+      left:0;
+      top:0;
+      width:22px;
+      height:22px;
+      background:$Gray6;
+      font-size:12px;
+      line-height:22px;
+      text-align:center;
+      color:#fff;
+      z-index:2;
+    }
+  }
+  .goods_detail{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding-top:10px;
+  }
+  .goods_name{
+    width:100%;
+    font-size:12px;
+    line-height:18px;
+    color:$Gray7;
+    @include ellipsis;
+  }
+  .goods_price{
+    font-size:13px;
+    line-height:19px;
+    font-weight:500;
+    color:#000;
+  }
+  .goods_sale{
+    font-size:10px;
+    line-height:13px;
+    font-weight:500;
+    letter-spacing:-0.5px;
+    color:$Red1;
+  }
+  .goods_coupon{
+    padding:0 3px 0 3px;
+    background:#4162c9;
+    border-radius: 2px;;
+    font-size:9px;
+    height:15px;
+    line-height:15px;
+    color:#fff;
+  }
+
+  // 상품 모듈 '랭킹'
+  &.type_rank{
+    .goods_list{
+  
+    }
+    
+    .goods_thumb{
+    }
+    .goods_detail{
+    }
+    .goods_price{
+    }
+    .goods_sale{
+    }
+  }
+
+  // 상품 모듈 '코디'
+  &.type_coordi{
+
+  }
+
+  // 상품 모듈 '업데이트'
+  &.type_update{
+
+  }
+}

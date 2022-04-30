@@ -5,18 +5,18 @@
   margin-top:$HeaderHeight;
 }
 
-//공통 article
-.cm_article{
-  clear:both;
-  position:relative;
-  &_inner{
-    padding:0 15px;
-  }
+.cm_link{
+  display:block;
+}
+
+.cm_inner{
+  padding:0 15px;
 }
 
 //공통 section
 .cm_section{
-
+  clear:both;
+  position:relative;
 }
 
 //최 하단 정보

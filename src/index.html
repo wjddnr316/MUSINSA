@@ -20,18 +20,18 @@
       <h1 class="m_logo">
          <a href="#"><span class="blind">무신사</span></a>
       </h1>
-      <div class="btn_box left">
-         <a href="#none" class="btn_icon alarm">
+      <div class="header_left">
+         <a href="#none" class="btn_alarm">
             <span class="blind">알림</span>
             <!--[D] 새로운 알림 있을 경우 alarm_new 추가-->
             <span class="alarm_new"><span class="blind">새 알림 있음</span></span>
          </a>
       </div>
-      <div class="btn_box right">
-         <a href="#none" class="btn_icon like">
+      <div class="header_right">
+         <a href="#none" class="btn_like">
             <span class="blind">좋아요</span>
          </a>
-         <a href="#none" class="btn_icon cart">
+         <a href="#none" class="btn_cart">
             <span class="blind">장바구니</span>
             <!--[D] 장바구니 상품 있을 경우 cart_counting 추가 -->
             <span class="cart_counting">6<span class="blind">개 상품</span></span>
@@ -40,19 +40,19 @@
    </header>
    <main id="container">
       <div id="content">
-         <article class="cm_article">
+         <section class="cm_section">
             <h2 class="blind">새로운 소식</h2>
             <div class="main_slide">
                <div class="pagination swiper-pagination"></div>
                <ul class="swiper-wrapper">
                   <li class="swiper-slide" tabindex="1">
-                     <a href="#none">
+                     <a href="#none" class="cm_link">
                         <div class="slide_img">
                            <img src="https://image.msscdn.net/musinsaUI/homework/banner/img1.jpg" alt="" />
                         </div>
                         <div class="slide_info">
                            <span class="category">Showcase</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">쿠어 21 S/S<br> 신상품 한정 발매</strong> 
                               신상품 증정 이벤트
                            </p>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="slide_info">
                            <span class="category">Showcase</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">인사일런스 우먼<br> 프로젝트 성수</strong> 
                               성수 티셔츠 선발매 및 21 S/S 최대 15% 할인
                            </p>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -97,7 +97,7 @@
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -112,7 +112,7 @@
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -127,7 +127,7 @@
                         </div>
                         <div class="slide_info">
                            <span class="category">Open</span>
-                           <p class="description" role="text">
+                           <p class="description">
                               <strong class="summary">BOUTIQUE<br> Grand Open</strong>
                               무신사가 선보이는 럭셔리 편집숍 오픈 기념 이벤트
                            </p>
@@ -136,260 +136,257 @@
                   </li>
                </ul>
             </div>
-         </article>
+         </section>
 
-         <article class="cm_article">
-            <h3 class="blind">상품영역</h3>
-            <div class="cm_article_inner">
-               <div class="cm_tab_box">
-                  <div class="cm_tab_list" role="tablist">
-                     <!-- [D] 탭 활성화 시 aria-selected="true"/ selected 클래스 적용 -->
-                     <button type="button" class="tab_menu selected" role="tab" aria-selected="true" aria-controls="ranking-panel" id="ranking-tab">랭킹</button>
+         <section class="cm_section">
+            <div class="cm_inner">
+               <div class="cm_main_tab">
+                  <div class="tab_list" role="tablist">
+                     <!-- [D] 탭 활성화 시 aria-selected="true" 적용 -->
+                     <button type="button" class="tab_menu" role="tab" aria-selected="true" aria-controls="ranking-panel" id="ranking-tab">랭킹</button>
                      <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="coordi-panel" id="coordi-tab">코디</button>
                      <button type="button" class="tab_menu" role="tab" aria-selected="false" aria-controls="update-panel" id="update-tab">업데이트</button>
                   </div>
                </div>
-               <div class="cm_panel_box" role="tabpanel" id="ranking-panel" aria-labelledby="ranking-tab">
-                  <section class="cm_section">
-                     <div class="cm_filter_box">
-                        <div class="filter_head">
-                           <h3 class="filter_title">
-                              상품 랭킹
-                              <a href="" class="filter_more">전체 <span class="blind">랭킹 보기</span></a>
-                           </h3>
-                           <!-- [D] 연령 옵션 활성화 시 aria-expanded="true"-->
-                           <button type="button" class="filter_toggle" aria-haspopup="dialog" aria-controls="option-dialog" aria-expanded="false" id="option-btn">전체 연령대</button>
-                           <!-- 연령 옵션 선택 시 펼칠 영역 -->
-                           <div class="cm_layer_pop" role="dialog" id="option-dialog" aria-labelledby="option-dialog-title" style="display:none; right:0; top:100%">
-                           </div>
+               <div class="cm_main_tab_panel" role="tabpanel" id="ranking-panel" aria-labelledby="ranking-tab">
+                  <div class="cm_filter_tab">
+                     <div class="filter_head">
+                        <h3 class="filter_title">
+                           상품 랭킹
+                           <a href="" class="filter_more">전체<span class="blind">보기</span></a>
+                        </h3>
+                        <!-- [D] 연령 옵션 활성화 시 aria-expanded="true"-->
+                        <button type="button" class="option_toggle" aria-haspopup="dialog" aria-controls="option-dialog" aria-expanded="false" id="option-btn">전체 연령대</button>
+                        <!-- 연령 옵션 선택 시 펼칠 영역 -->
+                        <div class="cm_layer_pop" role="dialog" id="option-dialog"  style="display:none; right:0; top:100%">
                         </div>
-                        <ul class="filter_list" role="menu">
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="true">전체</button>
+                     </div>
+                     <ul class="filter_list" role="tablist">
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="true">전체</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">상의</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">아우터</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">바지</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">가방</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">신발</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">스니커즈</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">양말</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">모자</button>
+                        </li>
+                        <li class="filter_item" role="none presentation">
+                           <button type="button" class="filter_btn" role="tab" aria-selected="false">레그웨어</button>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="goods_ranking">
+                     <ol class="goods_list">
+                        <li class="goods_item item_col_2">
+                           <a href="#none" class="cm_link">
+                              <div class="goods_thumb">
+                                 <span class="rank_badge"><span class="blind">순위</span>1</span>
+                                 <!-- [D] alt 값은 비워 주세요. -->
+                                 <img src="https://image.msscdn.net/musinsaUI/homework/goods/img1.jpg" alt="" />
+                              </div>
+                              <dl class="goods_detail">
+                                 <dt class="blind">상품명</dt>
+                                 <dd class="goods_name">한줄이 넘어간다면 말줄임이 적용 됩니다.</dd>
+                                 <dt class="blind">판매가격</dt>
+                                 <dd class="goods_price">1,999,900원</dd>
+                                 <dt class="blind">혜택</dt>
+                                 <dd class="goods_sale">24%</dd>
+                              </dl>
+                           </a>
+                        </li>
+                        
+                        <li class="goods_item item_col_2">
+                           <a href="#none" class="cm_link">
+                              <div class="goods_thumb">
+                                 <span class="rank_badge"><span class="blind">순위</span>2</span>
+                                 <!-- [D] alt 값은 비워 주세요. -->
+                                 <img src="https://image.msscdn.net/musinsaUI/homework/goods/img2.jpg" alt="" />
+                              </div>
+                              <dl class="goods_detail">
+                                 <dt class="blind">상품명</dt>
+                                 <dd class="goods_name">리퍼지스토어</dd>
+                                 <dt class="blind">판매가격</dt>
+                                 <dd class="goods_price">74,900원</dd>
+                                 <dt class="blind">혜택</dt>
+                                 <dd class="goods_sale">24%</dd>
+                              </dl>
+                           </a>
+                        </li>
+                        
+                        <li class="goods_item">
+                           <a href="#none" class="cm_link">
+                              <div class="goods_thumb">
+                                 <span class="rank_badge"><span class="blind">순위</span>3</span>
+                                 <!-- [D] alt 값은 비워 주세요. -->
+                                 <img src="https://image.msscdn.net/musinsaUI/homework/goods/img3.jpg" alt="" />
+                              </div>
+                              <dl class="goods_detail">
+                                 <dt class="blind">상품명</dt>
+                                 <dd class="goods_name">리퍼지스토어</dd>
+                                 <dt class="blind">판매가격</dt>
+                                 <dd class="goods_price">9,999,900원</dd>
+                                 <dt class="blind">혜택</dt>
+                                 <dd class="goods_sale">24%</dd>
+                              </dl>
+                           </a>
+                        </li>
+                        
+                        <li class="goods_item">
+                           <a href="#none" class="cm_link">
+                              <div class="goods_thumb">
+                                 <span class="rank_badge"><span class="blind">순위</span>4</span>
+                                 <!-- [D] alt 값은 비워 주세요. -->
+                                 <img src="https://image.msscdn.net/musinsaUI/homework/goods/img4.jpg" alt="" />
+                              </div>
+                              <dl class="goods_detail">
+                                 <dt class="blind">상품명</dt>
+                                 <dd class="goods_name">리퍼지스토어</dd>
+                                 <dt class="blind">판매가격</dt>
+                                 <dd class="goods_price">74,900원</dd>
+                                 <dt class="blind">혜택</dt>
+                                 <dd class="goods_coupon">쿠폰</dd>
+                              </dl>
+                           </a>
+                        </li>
+                        
+                        <li class="goods_item">
+                           <a href="#none" class="cm_link">
+                              <div class="goods_thumb">
+                                 <span class="rank_badge"><span class="blind">순위</span>5</span>
+                                 <!-- [D] alt 값은 비워 주세요. -->
+                                 <img src="https://image.msscdn.net/musinsaUI/homework/goods/img5.jpg" alt="" />
+                              </div>
+                              <dl class="goods_detail">
+                                 <dt class="blind">상품명</dt>
+                                 <dd class="goods_name">리퍼지스토어</dd>
+                                 <dt class="blind">판매가격</dt>
+                                 <dd class="goods_price">74,900원</dd>
+                                 <dt class="blind">혜택</dt>
+                                 <dd class="goods_sale">24%</dd>
+                              </dl>
+                           </a>
+                        </li>
+                     </ol>
+                  </div>
+
+                  <div class="cm_banner">
+                     <div class="banner_slide">
+                        <ul class="swiper-wrapper">
+                           <li class="swiper-slide">
+                              <a href="#none" class="cm_link">
+                                 <div class="cm_banner_card">
+                                    <div class="banner_thumb">
+                                       <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
+                                    </div>
+                                    <div class="banner_info">
+                                       <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
+                                    </div>
+                                 </div>
+                              </a>
                            </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">상의</button>
+                           <li class="swiper-slide">
+                              <a href="#none" class="cm_link">
+                                 <div class="cm_banner_card">
+                                    <div class="banner_thumb">
+                                       <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
+                                    </div>
+                                    <div class="banner_info">
+                                       <strong class="title">가나다라마바사아자차카타파하가나다라마바사아자차카타파하</strong>
+                                    </div>
+                                 </div>
+                              </a>
                            </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">아우터</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">바지</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">가방</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">신발</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">스니커즈</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">양말</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">모자</button>
-                           </li>
-                           <li class="filter_item" role="none presentation">
-                              <button type="button" class="filter_menu" role="menuitem" aria-selected="false">레그웨어</button>
+                           <li class="swiper-slide">
+                              <a href="#none" class="cm_link">
+                                 <div class="cm_banner_card">
+                                    <div class="banner_thumb">
+                                       <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
+                                    </div>
+                                    <div class="banner_info">
+                                       <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
+                                    </div>
+                                 </div>
+                              </a>
                            </li>
                         </ul>
                      </div>
+                     <div class="swiper-pagination"></div>
+                  </div>
 
-                     <div class="md_goods_box type_rank">
-                        <ol class="goods_list">
-                           <li class="goods_item">
-                              <a href="#none" class="goods_link">
-                                 <div class="goods_thumb">
-                                    <span class="rank_badge"><span class="blind">순위</span>1</span>
-                                    <!-- [D] alt 값은 비워 주세요. -->
-                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img1.jpg" alt="" />
+                  <div class="cm_banner">
+                     <div class="banner_slide">
+                        <ul class="swiper-wrapper">
+                           <li class="swiper-slide">
+                              <a href="#none" class="cm_link">
+                                 <div class="cm_banner_card">
+                                    <div class="banner_info">
+                                       <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
+                                    </div>
+                                    <div class="banner_thumb">
+                                       <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub3.png" alt="">
+                                    </div>
                                  </div>
-                                 <dl class="goods_detail">
-                                    <dt class="blind">상품명</dt>
-                                    <dd class="goods_name">한줄이 넘어간다면 말줄임이 적용 됩니다.</dd>
-                                    <dt class="blind">판매가격</dt>
-                                    <dd class="goods_price">1,999,900원</dd>
-                                    <dt class="blind">혜택</dt>
-                                    <dd class="goods_sale">24%</dd>
-                                 </dl>
                               </a>
                            </li>
-                           
-                           <li class="goods_item">
-                              <a href="#none" class="goods_link">
-                                 <div class="goods_thumb">
-                                    <span class="rank_badge"><span class="blind">순위</span>2</span>
-                                    <!-- [D] alt 값은 비워 주세요. -->
-                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img2.jpg" alt="" />
+                           <li class="swiper-slide">
+                              <a href="#none" class="cm_link">
+                                 <div class="cm_banner_card">
+                                    <div class="banner_info">
+                                       <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
+                                    </div>
+                                    <div class="banner_thumb">
+                                       <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub3.png" alt="">
+                                    </div>
                                  </div>
-                                 <dl class="goods_detail">
-                                    <dt class="blind">상품명</dt>
-                                    <dd class="goods_name">리퍼지스토어</dd>
-                                    <dt class="blind">판매가격</dt>
-                                    <dd class="goods_price">74,900원</dd>
-                                    <dt class="blind">혜택</dt>
-                                    <dd class="goods_sale">24%</dd>
-                                 </dl>
                               </a>
                            </li>
-                           
-                           <li class="goods_item">
-                              <a href="#none" class="goods_link">
-                                 <div class="goods_thumb">
-                                    <span class="rank_badge"><span class="blind">순위</span>3</span>
-                                    <!-- [D] alt 값은 비워 주세요. -->
-                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img3.jpg" alt="" />
-                                 </div>
-                                 <dl class="goods_detail">
-                                    <dt class="blind">상품명</dt>
-                                    <dd class="goods_name">리퍼지스토어</dd>
-                                    <dt class="blind">판매가격</dt>
-                                    <dd class="goods_price">9,999,900원</dd>
-                                    <dt class="blind">혜택</dt>
-                                    <dd class="goods_sale">24%</dd>
-                                 </dl>
-                              </a>
-                           </li>
-                           
-                           <li class="goods_item">
-                              <a href="#none" class="goods_link">
-                                 <div class="goods_thumb">
-                                    <span class="rank_badge"><span class="blind">순위</span>4</span>
-                                    <!-- [D] alt 값은 비워 주세요. -->
-                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img4.jpg" alt="" />
-                                 </div>
-                                 <dl class="goods_detail">
-                                    <dt class="blind">상품명</dt>
-                                    <dd class="goods_name">리퍼지스토어</dd>
-                                    <dt class="blind">판매가격</dt>
-                                    <dd class="goods_price">74,900원</dd>
-                                    <dt class="blind">혜택</dt>
-                                    <dd class="goods_coupon">쿠폰</dd>
-                                 </dl>
-                              </a>
-                           </li>
-                           
-                           <li class="goods_item">
-                              <a href="#none" class="goods_link">
-                                 <div class="goods_thumb">
-                                    <span class="rank_badge"><span class="blind">순위</span>5</span>
-                                    <!-- [D] alt 값은 비워 주세요. -->
-                                    <img src="https://image.msscdn.net/musinsaUI/homework/goods/img5.jpg" alt="" />
-                                 </div>
-                                 <dl class="goods_detail">
-                                    <dt class="blind">상품명</dt>
-                                    <dd class="goods_name">리퍼지스토어</dd>
-                                    <dt class="blind">판매가격</dt>
-                                    <dd class="goods_price">74,900원</dd>
-                                    <dt class="blind">혜택</dt>
-                                    <dd class="goods_sale">24%</dd>
-                                 </dl>
-                              </a>
-                           </li>
-                        </ol>
+                        </ul>
                      </div>
-
-                     <div class="cm_banner_box">
-                        <div class="banner_slide">
-                           <ul class="swiper-wrapper">
-                              <li class="swiper-slide">
-                                 <a href="#none">
-                                    <div class="cm_banner_card">
-                                       <div class="banner_thumb">
-                                          <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
-                                       </div>
-                                       <div class="banner_info">
-                                          <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="swiper-slide">
-                                 <a href="#none">
-                                    <div class="cm_banner_card">
-                                       <div class="banner_thumb">
-                                          <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
-                                       </div>
-                                       <div class="banner_info">
-                                          <strong class="title">가나다라마바사아자차카타파하가나다라마바사아자차카타파하</strong>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="swiper-slide">
-                                 <a href="#none">
-                                    <div class="cm_banner_card">
-                                       <div class="banner_thumb">
-                                          <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub1.jpg" alt="">
-                                       </div>
-                                       <div class="banner_info">
-                                          <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
-                                       </div>
-                                    </div>
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                     </div>
-
-                     <div class="cm_banner_box">
-                        <div class="banner_slide">
-                           <ul class="swiper-wrapper">
-                              <li class="swiper-slide">
-                                 <a href="#none">
-                                    <div class="cm_banner_card">
-                                       <div class="banner_info">
-                                          <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
-                                       </div>
-                                       <div class="banner_thumb">
-                                          <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub3.png" alt="">
-                                       </div>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="swiper-slide">
-                                 <a href="#none">
-                                    <div class="cm_banner_card">
-                                       <div class="banner_info">
-                                          <strong class="title">손 피부를 보호해줄 핸드크림 추천 랭킹</strong>
-                                       </div>
-                                       <div class="banner_thumb">
-                                          <img src="https://image.msscdn.net/musinsaUI/homework/banner/sub3.png" alt="">
-                                       </div>
-                                    </div>
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                     </div>
-                     
-                     <div class="cm_sub_info">
-                        <strong class="blind">마지막 업데이트</strong>
-                        5분 전 갱신
-                     </div>
-                     <a href="#none" class="cm_btn_more">
-                        <i class="icon_arrow"></i>
-                        <span class="text">상품 랭킹 전체 보기</span>
-                     </a>
-                     <button type="button" class="cm_btn_more">
-                        <span class="text">새로운 추천</span>
-                        <i class="icon_refresh"></i>
-                     </button>
-                  </section>
+                     <div class="swiper-pagination"></div>
+                  </div>
+                  
+                  <div class="cm_sub_info">
+                     <strong class="blind">마지막 업데이트</strong>
+                     5분 전 갱신
+                  </div>
+                  <a href="#none" class="cm_btn_more">
+                     <i class="icon_arrow"></i>
+                     <span class="text">상품 랭킹 전체 보기</span>
+                  </a>
+                  <button type="button" class="cm_btn_more">
+                     <span class="text">새로운 추천</span>
+                     <i class="icon_refresh"></i>
+                  </button>
                </div>
 
-               <div class="cm_panel_box" role="tabpanel" id="coordi-panel" aria-labelledby="coordi-tab">
+               <div class="cm_tab_panel" role="tabpanel" id="coordi-panel" aria-labelledby="coordi-tab">
                   
                </div>
-               <div class="cm_panel_box" role="tabpanel" id="update-panel" aria-labelledby="update-tab">
+               <div class="cm_tab_panel" role="tabpanel" id="update-panel" aria-labelledby="update-tab">
 
                </div>
             </div>
-         </article>
+         </section>
       </div>
    </main>
 
@@ -413,8 +410,8 @@
         },
       });
 
-      const bannerSlideArray = document.querySelectorAll('.cm_banner_box .banner_slide');
-      const bannerSlidePageArray = document.querySelectorAll('.cm_banner_box .swiper-pagination');
+      const bannerSlideArray = document.querySelectorAll('.cm_banner .banner_slide');
+      const bannerSlidePageArray = document.querySelectorAll('.cm_banner .swiper-pagination');
       for(let i = 0; i < bannerSlideArray.length; i ++ ){
          console.log(bannerSlideArray[i]);
          var bannerSwiper = new Swiper(bannerSlideArray[i], {
@@ -435,7 +432,7 @@
       
 
       // tab 
-      const tab = document.querySelectorAll('.cm_tab_box .tab_menu');
+      const tab = document.querySelectorAll('.cm_main_tab .tab_menu');
 
       tab.forEach((el) => {
          el.addEventListener('click', () => {
@@ -444,7 +441,7 @@
       })
 
       // filter 
-      const filter = document.querySelectorAll('.cm_filter_box .filter_menu');
+      const filter = document.querySelectorAll('.cm_filter_tab .filter_btn');
 
       filter.forEach(el => {
          el.addEventListener('click',() => {

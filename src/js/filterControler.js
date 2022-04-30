@@ -1,5 +1,5 @@
 function activeFilter(menu){
-  const menuAll = menu.closest('[role="menu"]').querySelectorAll('[role="menuitem"]');
+  const menuAll = menu.closest('[role="tablist"]').querySelectorAll('[role="tab"]');
   for(let i = 0; i < menuAll.length; i ++) {
     menuAll[i].setAttribute('aria-selected','false');
   }
@@ -9,8 +9,8 @@ function activeFilter(menu){
 
 function filterScroll(selectedItem){
   const selectedItemOffsetLeft = selectedItem.offsetLeft;
-  const filterContainer = selectedItem.closest('[role="menu"]')
-  const firstFilterItem = filterContainer.querySelectorAll('[role="menuitem"]')[0];
+  const filterContainer = selectedItem.closest('[role="tablist"]')
+  const firstFilterItem = filterContainer.querySelectorAll('[role="tab"]')[0];
   filterContainer.scrollTo({
     left:selectedItemOffsetLeft - firstFilterItem.offsetLeft,
     behavior: 'smooth',
