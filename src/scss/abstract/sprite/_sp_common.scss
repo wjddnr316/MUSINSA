@@ -11,6 +11,18 @@ $sp_common: (
             width: 40px,
             height: 46px,
         ),
+        arrow14: (
+            offset-x: -40px,
+            offset-y: -86px,
+            width: 28px,
+            height: 28px,
+        ),
+        arrow18: (
+            offset-x: -94px,
+            offset-y: -36px,
+            width: 36px,
+            height: 36px,
+        ),
         cart: (
             offset-x: 0px,
             offset-y: -86px,
@@ -28,6 +40,12 @@ $sp_common: (
             offset-y: 0px,
             width: 190px,
             height: 32px,
+        ),
+        refresh: (
+            offset-x: -134px,
+            offset-y: -36px,
+            width: 36px,
+            height: 36px,
         ),
     )
 );

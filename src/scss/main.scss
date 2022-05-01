@@ -47,6 +47,7 @@
   }
   .pagination{
     width:100px !important;
+    bottom:5px !important;
     z-index:5;
     .swiper-pagination-bullet{
       background:rgba(255,2552,255,.5);
@@ -66,3 +67,5 @@
 
 // 모듈
 @import './import/_goods_ranking';
+@import './import/_goods_coordi';
+@import './import/_goods_update';

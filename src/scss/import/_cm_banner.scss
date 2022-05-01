@@ -1,93 +1,124 @@
 
 .cm_banner{
   position:relative;
+  padding:60px 0 0;
 
   // swiper 
   .banner_slide{    
     overflow:hidden;
     margin: 0 -15px 0;
-    padding: 0 15px;
+    padding: 0 15px 10px;
     &~.swiper-pagination{
       position:relative;
       bottom:auto;
       left:auto;
       line-height:6px;
       .swiper-pagination-bullet{
-        margin-top:10px;
         vertical-align:top;
       }
     }
   }
-}
 
-// banner 카드 default 는 이미지 우측 정렬
-.cm_banner_card{
-  position:relative;
-  display:flex;
-  align-items:center;
-  border-radius:6px;
-  font-size:0;
-}
-
-.banner_info{    
-  margin-bottom:5px;
-  padding:20px calc(39.13% + 5px) 18px 15px;
-  background:#484848;
-  border-radius:6px;
-  .title{
-    display:block;
-    font-size:15px;
-    line-height:21px;
-    font-weight:500;
-    color:#fff;
-    @include ellipsis(2);
+  // banner 카드 default 는 통 이미지 타입
+  .cm_banner_card{
+    position:relative;
+    display:flex;
+    align-items:center;
+    border-radius:6px;
+    font-size:0;
   }
-  .sub{
-    font-size:14px;
-    line-height:21px;
-    font-weight:500;
-    color:rgba(255,255,255,.65);
-    &+.sub{
-      &:before{
-        content:'';
-        display:inline-block;
-        margin:0 6px;
-        width:2px;
-        height:2px;
-        background-color:$Gray7;
-        border-radius:50%;
-        vertical-align:middle;
+  .banner_thumb,
+  .banner_info{
+    position:relative;
+    z-index:2;
+    box-sizing:border-box;
+  }
+  .banner_thumb{
+    img{
+      width:100%;
+    }
+  }
+
+  // 이미지 좌측 정렬
+  &.type_banner1{
+    .cm_banner_card{
+      background:$Gray1;
+    }
+    .banner_thumb{
+      overflow:hidden;
+      flex:0 0 135px;
+      border-radius:6px 0 0 6px;
+    }
+    .banner_info{
+      overflow:hidden;
+      padding:0 15px;
+      .title{
+        font-size:15px;
+        line-height:20px;
+        font-weight:500;
+        color:#000;
+        @include ellipsis(2);
+      }
+      .sub{    
+        display:flex;
+        padding-top:3px;
+        font-size:12px;
+        line-height:18px;
+        color:$Gray7;
+        .item{
+          @include ellipsis;
+        }
+        .item+.item{
+          flex:1 0 auto;
+          white-space:normal;
+          overflow:visible;
+          text-overflow:unset;
+          &:before{
+            content:'';
+            display:inline-block;
+            margin:0 6px;
+            width:2px;
+            height:2px;
+            border-radius:50%;
+            background:$Gray7;
+            vertical-align: 3px;
+          }
+        }
       }
     }
   }
-}
-.banner_thumb{
-  flex-shrink:0;
-  width:39.130%;
-  img{
-    width:100%;
-    border-radius:6px 0 0 6px;
-  }
-}
-.banner_info + .banner_thumb{
-  position:absolute;
-  right:0;
-  bottom:-5px;
-  img{
-    border-radius:0;
-  }
-}
 
-// 이미지 좌측에 있을 경우
-.banner_thumb + .banner_info{
-  padding:12px 15px;
-  background:transparent;
-  .title{
-    color:#000;
+  // 이미지 우측 정렬/투명배경
+  &.type_banner2{
+    .banner_slide{
+      padding-bottom:15px;
+    }
+    .cm_banner_card{
+      min-height:80px;
+      background:#484848;
+    }
+    .banner_thumb{
+      position:absolute;
+      right:0;
+      top:0;  
+      width:135px;
+    }
+    .banner_info{
+      padding:0 135px 0 15px;
+      width:100%;
+      line-height:21px;
+      font-weight:500;
+      .title{
+        font-size:15px;
+        color:#fff;
+        @include ellipsis;
+      }
+      .sub{
+        font-size:14px;
+        color:rgba(255,255,255,.65);
+        @include ellipsis;
+      }
+    }
   }
-  .sub{
-    font-size:12px;
-    line-height:18px;
-    color:$Gray7
-  }
+  
 }

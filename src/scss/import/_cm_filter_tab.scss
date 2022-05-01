@@ -1,5 +1,5 @@
 .cm_filter_tab{
-  padding:15px 0;
+  padding:0 0 15px;
   .filter_head{
     position:relative;
     display:flex;
@@ -37,12 +37,12 @@
       right:0;
       top:50%;
       transform:translateY(-50%);
-      @include get-sprite('arrow14',$sp_main);
+      @include get-sprite('arrow14',$sp_common);
     }
   }
   .option_toggle{
     position:relative;
-    padding-right:20px;
+    padding-right:17px;
     font-size:14px;
     line-height:21px;
     color:#000;
@@ -85,4 +85,8 @@
       color:#000;
     }
   }
+}
+
+.cm_banner + .cm_filter_tab{
+  padding-top:0;
 }

@@ -1,0 +1,105 @@
+.goods_coordi{
+  .coordi_list{
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .coordi_item{
+    flex:0 0 calc(50% - 1.5px);
+    margin-bottom:3px;
+    &:nth-child(even){
+      margin-left:3px;
+    }
+    &:nth-last-child(-n + 2){
+      margin-bottom:0;
+      .coordi_info{
+        padding-bottom:25px;
+      }
+    }
+  }
+  .coordi_thumb{
+    position:relative;
+    overflow:hidden;
+    padding-top:calc(256 / 171 * 100%);
+    border-radius:6px;
+    background-color:$Gray1;
+    background-blend-mode:multiply;
+    >.cm_link{
+      position:absolute;
+      left:0;right:0;top:0;bottom:0;
+    }
+    img{
+      position:absolute;
+      left:0;
+      top:50%;
+      width:100%;
+      height:auto;
+      transform:translateY(-50%);
+    }
+    .video_badge{
+      position:absolute;
+      top:10px;
+      right:10px;
+      @include get-sprite('autoplay',$sp_main);
+    }
+    .category_label{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      padding:10px 0;
+      background:$Gray1;
+      text-align:center;
+      font-size:12px;
+      line-height:16px;
+      color:#000;
+    }
+  }
+  .coordi_info{
+    padding:10px 0 22px;
+    .goods_item{
+      display:flex;
+      align-items:center;
+      &+.goods_item{
+        padding-top:10px;
+      }
+    }
+    .goods_thumb{
+      position:relative;
+      overflow:hidden;
+      flex:0 0 45px;
+      height:54px;
+      background:$Gray1;
+      background-blend-mode:multiply;
+      img{
+        position:absolute;
+        left:0;
+        top:50%;
+        width:100%;
+        transform:translateY(-50%);
+        
+      }    
+    }
+    .goods_detail{
+      display:flex;
+      flex-wrap:wrap;
+      overflow:hidden;
+      padding:0 10px;
+      font-size:12px;
+      line-height:18px;
+      font-weight:500;
+    }
+    .goods_name{
+      flex: 1 0 100%;
+      font-weight:400;
+      color:$Gray7;
+      @include ellipsis;
+    }
+    .goods_price{
+      padding-right:3px;
+      color:#000;
+    }
+    .goods_sale{
+      color:$Red1;
+    }
+  }
+}

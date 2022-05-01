@@ -1,12 +1,21 @@
 .goods_ranking{
-  .goods_list{
+  .ranking_list{
     display:flex;
     flex-wrap:wrap;   
   }
-  .goods_item{
+  .ranking_item{
     width:calc(33.333% - 2px);
     padding-bottom:20px;
     margin-left:3px;
+
+    //3x 아이템에 margin-left 값 초기화
+    &:nth-child(3n + 1){
+      margin-left:0;
+    }
+    //마지막 3개 아이템 padding-bottom값 초기화
+    &:nth-last-child(-n + 3){
+      padding-bottom:0;
+    }
     &.item_col_2{
       width:calc(50% - 1.5px);
       &:first-child{
@@ -14,6 +23,9 @@
       }
       &~.goods_item:nth-child(3n) { 
         margin-left:0;
+      }
+      &~.goods_item:nth-child(3n + 1){
+        margin-left:3px;
       }
       .rank_badge{
         width:24px;
@@ -62,7 +74,7 @@
     flex-wrap:wrap;
     justify-content:space-between;
     align-items:center;
-    padding-top:10px;
+    padding:10px 3px 0 0;
   }
   .goods_name{
     width:100%;
@@ -78,13 +90,18 @@
     color:#000;
   }
   .goods_sale{
+    margin-left:auto;
     font-size:10px;
     line-height:13px;
     font-weight:500;
     letter-spacing:-0.5px;
     color:$Red1;
+    &~.goods_coupon{
+      margin-left:5px;
+    }
   }
   .goods_coupon{
+    margin-left:auto;
     padding:0 3px 0 3px;
     background:#4162c9;
     border-radius: 2px;;
@@ -92,31 +109,5 @@
     height:15px;
     line-height:15px;
     color:#fff;
-  }
-
-  // 상품 모듈 '랭킹'
-  &.type_rank{
-    .goods_list{
-  
-    }
-    
-    .goods_thumb{
-    }
-    .goods_detail{
-    }
-    .goods_price{
-    }
-    .goods_sale{
-    }
-  }
-
-  // 상품 모듈 '코디'
-  &.type_coordi{
-
-  }
-
-  // 상품 모듈 '업데이트'
-  &.type_update{
-
   }
 }

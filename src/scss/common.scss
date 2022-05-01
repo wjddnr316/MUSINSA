@@ -2,7 +2,7 @@
 @import './public/header';
 
 #container{
-  margin-top:$HeaderHeight;
+  padding:$HeaderHeight 0 60px;
 }
 
 .cm_link{
@@ -19,14 +19,51 @@
   position:relative;
 }
 
+.cm_content_box{
+  padding-top:60px;
+  &:first-of-type{
+    padding-top:15px;
+  }
+}
+
 //최 하단 정보
 .cm_sub_info{
+  margin-top:20px;
   font-size:12px;
   line-height:18px;
   color:$Gray6;
+  &+.cm_rel_more{
+    margin-top:7px;
+  }
 }
 
-.cm_btn_more{
-
+.cm_rel_more{
+  text-align:center;
+  .cm_rel_btn{
+    display:inline-flex;
+    align-items:center;
+    padding:0 20px; 
+    height:40px;
+    vertical-align:top;
+    border-radius:20px;
+    border:1px solid $Gray3;
+    box-sizing:border-box;
+    font-size:14px;
+    color:$Gray7;
+    &.more{
+      &:after{
+        content:'';
+        margin:0 -7px 0 9px;
+        @include get-sprite('arrow18',$sp_common);
+      }
+    }
+    &.refresh{
+      &:before{
+        content:'';
+        margin:0 4px 0 0;
+        @include get-sprite('refresh',$sp_common);
+      }
+    }
+  }
 }
 // footer
