@@ -22,18 +22,13 @@
     padding-top:calc(256 / 171 * 100%);
     border-radius:6px;
     background-color:$Gray1;
-    background-blend-mode:multiply;
     >.cm_link{
       position:absolute;
       left:0;right:0;top:0;bottom:0;
     }
     img{
-      position:absolute;
-      left:0;
-      top:50%;
-      width:100%;
-      height:auto;
-      transform:translateY(-50%);
+      @include img-object;
+      mix-blend-mode:multiply;
     }
     .video_badge{
       position:absolute;
@@ -69,14 +64,9 @@
       flex:0 0 45px;
       height:54px;
       background:$Gray1;
-      background-blend-mode:multiply;
       img{
-        position:absolute;
-        left:0;
-        top:50%;
-        width:100%;
-        transform:translateY(-50%);
-        
+        @include img-object;
+        mix-blend-mode:multiply;
       }    
     }
     .goods_detail{
@@ -95,11 +85,19 @@
       @include ellipsis;
     }
     .goods_price{
-      padding-right:3px;
+      padding-right:3px;    
+      word-break: break-all;
       color:#000;
     }
     .goods_sale{
       color:$Red1;
     }
+  }
+}
+
+@media all and (max-width:360px){
+  .goods_coordi .coordi_info .goods_price{
+    width:100%;
+    @include ellipsis;
   }
 }

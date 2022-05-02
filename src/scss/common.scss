@@ -2,7 +2,7 @@
 @import './public/header';
 
 #container{
-  padding:$HeaderHeight 0 60px;
+  padding:$HeaderHeight env(safe-area-inset-right) 60px env(safe-area-inset-left);
 }
 
 .cm_link{
