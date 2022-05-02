@@ -1,5 +1,5 @@
 @import './public/base';
-@import './public/header';
+@import './common/header';
 
 #container{
   padding:$HeaderHeight env(safe-area-inset-right) 60px env(safe-area-inset-left);
