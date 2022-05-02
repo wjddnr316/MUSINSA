@@ -1,21 +1,23 @@
 ## 폴더 구조 
 
  src
-> css
+> css/
 >
-> img
+> img/
 >
-> js
->> lib ( ibrary )
+> js/
+>> lib ( library )
 >
-> scss
->> abstract ( mixin, variables )
+> scss/
+>> abstract/ ( mixin, variables )
 >>
->> import ( UI component )
+>> import/ ( UI component )
 >>
->> public
+>> common/ ( layout ) 
+>>
+>> public/ ( base)
 >
-> sprites ( 자동화 sprite image Group 경로 )
+> sprites/ ( 자동화 sprite image Group 경로 )
 >
 > index.html ( 산출물 경로)
 
@@ -27,9 +29,9 @@
 npm i
 ```
 
-실행
+실행 방법
 ```
-gulp runBrowserSync
+/MUSINSA 경로에서 gulp runBrowserSync 또는 index.html 파일 실행
 ``` 
 
 ## 실행 환경
@@ -37,13 +39,13 @@ gulp runBrowserSync
 `node` -v
 
 ```
-v 12 ~ 
+v 12 ~
 ```
 
 `npm` -v
 
 ```
-v 8 ~
+v 6 ~
 ```
 
 `gulp` -v
@@ -51,3 +53,5 @@ v 8 ~
 ```
 v 4 ~
 ```
+
+## 
